@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "@ist/commonui-components/dist/design-tokens.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@source "./src/**/*.{vue,js,ts,jsx,tsx}";
+
+@theme {
+  /* Light theme tokens - CommonUI design tokens will be available */
+}
+
+@theme dark {
+  /* Dark theme tokens - CommonUI design tokens will be available */
+}
+
