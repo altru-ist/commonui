@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@ist/commonui-components": "file:./ist-commonui-components-1.0.9.tgz",
-    "@primevue/themes": "^4.4.1",
     "primevue": "^4.4.1",
+    "tailwindcss-primeui": "^0.6.1",
     "vue": "^3.4.0",
     "vue-router": "^4.3.0"
   },
