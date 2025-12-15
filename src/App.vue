@@ -315,9 +315,157 @@ const showToast = () => {
   margin: 0 auto;
 }
 
+.dashboard-cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px -2px;
+}
+
+.stat-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+}
+
+.stat-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+}
+
+.stat-icon-wrapper {
+  border-radius: 9999px;
+  padding: 12px;
+}
+
+.stat-icon-blue {
+  background-color: rgb(219, 234, 254);
+}
+
+.stat-icon-green {
+  background-color: rgb(220, 252, 231);
+}
+
+.stat-icon-orange {
+  background-color: rgb(255, 237, 213);
+}
+
+.stat-icon-red {
+  background-color: rgb(254, 226, 226);
+}
+
+.stat-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.stat-icon-blue .stat-icon {
+  color: rgb(37, 99, 235);
+  stroke: rgb(37, 99, 235);
+}
+
+.stat-icon-green .stat-icon {
+  color: rgb(22, 163, 74);
+  stroke: rgb(22, 163, 74);
+}
+
+.stat-icon-orange .stat-icon {
+  color: rgb(234, 88, 12);
+  stroke: rgb(234, 88, 12);
+}
+
+.stat-icon-red .stat-icon {
+  color: rgb(220, 38, 38);
+  stroke: rgb(220, 38, 38);
+}
+
+.stat-title {
+  color: rgb(17, 24, 39);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-left: 12px;
+}
+
+.stat-description {
+  color: rgb(107, 114, 128);
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 12px;
+}
+
+.stat-value-wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  margin-top: 12px;
+}
+
+.stat-value {
+  color: rgb(17, 24, 39);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.stat-value-secondary {
+  color: rgb(107, 114, 128);
+  font-size: 20px;
+  line-height: 28px;
+  margin-left: 4px;
+}
+
+.stat-action-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 16px;
+  color: rgb(100, 116, 139);
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-action-button:hover {
+  color: rgb(71, 85, 105);
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .main-content {
     padding: 1rem;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
   }
 }
 </style>
